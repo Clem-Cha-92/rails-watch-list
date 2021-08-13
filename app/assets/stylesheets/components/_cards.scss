@@ -1,3 +1,15 @@
+.card-category-index {
+  background-size: cover;
+  background-position: center;
+  height: 350px;
+  text-align: center;
+  padding-top: 60px;
+  color: white;
+  font-size: 30px;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
 .card-category {
   background-size: cover;
   background-position: center;
@@ -11,7 +23,7 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
-.card-category-movie {
+.card-category-list {
   background-size: cover;
   background-position: center;
   height: 400px;
@@ -24,6 +36,31 @@
   border-radius: 5px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   height: 200px;
+  position: relative;
+}
+
+.card-category-list .list-card-delete-button {
+  font-size: 24px;
+  height: 30px;
+  width: 30px;
+  padding: 3px;
+  color: white;
+  font-weight: bold;
+  border-radius: 50%;
+  transform: rotate(45deg);
+  background-color: red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.8;
+  position: absolute;
+  top: 5px;
+  right: 10px;
+}
+
+.card-category-list .list-card-delete-button:hover {
+  opacity: 1;
+  background-color: rgb(189, 5, 5);
 }
 
 .cards {

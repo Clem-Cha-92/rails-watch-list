@@ -11,6 +11,7 @@
 <div class="yield-body">
   <div class="my-lists-header">
     <%= link_to "Add a movie", new_list_bookmark_path(@list), class:"btn btn-flat" %>
+    <%= link_to "Delete list", list_path(@list), method: :delete, data: {confirm: "Are you sure?"}, class:"btn-red" %>
   </div>
 
   <div class="cards-movies">
@@ -31,7 +32,7 @@
           <div id="card-movie-bottom">
             <i class="fas fa-quote-left"></i>
             <%= bookmark.comment %>
-            <%= link_to "delete", bookmark_path(bookmark), method: :delete, data: { confirm: "Are you sure?" } %>
+            <%= link_to "delete", bookmark_path(bookmark), method: :delete, data: { confirm: "Are you sure?" }%>
           </div>
 
       </div>

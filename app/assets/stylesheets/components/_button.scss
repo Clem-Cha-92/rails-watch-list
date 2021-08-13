@@ -11,3 +11,16 @@
   background: #1BCB7F;
   color: white;
 }
+
+.btn-red {
+  color: white;
+  padding: 8px 24px;
+  border-radius: 4px;
+  background: #dd1e1e;
+  transition: background 0.3s ease;
+}
+
+.btn-red:hover {
+  background: #ad1a1a;
+  color: white;
+}
