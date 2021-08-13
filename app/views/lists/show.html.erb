@@ -1,18 +1,41 @@
-<h1><%= @list.name %></h1>
+<% if @list.photo.attached? %>
+  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cl_image_path @list.photo.key %>)">
+    <%= @list.name %>
+  </div>
+<% else %>
+  <div class="card-category-movie" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://source.unsplash.com/random')">
+    <%= @list.name  %>
+  </div>
+<% end %>
 
-<ol>
-  <% @list.bookmarks.each do |bookmark| %>
-    <li>Title : <%= bookmark.movie.title %></li>
-      <ul>
-        <li>Overview : <%= bookmark.movie.overview %></li>
-        <li>Rating : <%= bookmark.movie.rating %></li>
-        <li>Comment : <%= bookmark.comment %></li>
-        <img src="<%= bookmark.movie.poster_url%>" alt="Poster of the movie">
-        <li><%= link_to "Delete bookmark", bookmark_path(bookmark), method: :delete, data: { confirm: "Are you sure?" } %></li>
-        <br>
-      </ul>
-  <% end %>
-</ol>
+<div class="yield-body">
+  <div class="my-lists-header">
+    <%= link_to "Add a movie", new_list_bookmark_path(@list), class:"btn btn-flat" %>
+  </div>
 
-<%= link_to "Lists", root_path, class:"btn btn-primary" %> |
-<%= link_to "New bookmark", new_list_bookmark_path(@list), class:"btn btn-primary" %>
+  <div class="cards">
+    <% @list.bookmarks.each do |bookmark| %>
+      <div class="card-movie-bookmark">
+        <img src="<%= bookmark.movie.poster_url%>" />
+          <div id="card-movie-top">
+            <h2><%= bookmark.movie.title  %></h2>
+            <p> • </p>
+            <%= bookmark.movie.rating %>
+            <i class="fas fa-star"></i>
+          </div>
+
+          <div class="card-movie-bookmark-infos">
+            <p><%= bookmark.movie.overview %></p>
+          </div>
+
+          <div id="card-movie-bottom">
+            <i class="fas fa-quote-left"></i>
+            <%= bookmark.comment %>
+            <%= link_to "delete", bookmark_path(bookmark), method: :delete, data: { confirm: "Are you sure?" } %>
+          </div>
+
+      </div>
+    <% end %>
+  </div>
+
+</div>

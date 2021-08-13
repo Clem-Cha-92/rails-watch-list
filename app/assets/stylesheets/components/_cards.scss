@@ -1,7 +1,20 @@
-.card-category-movie {
+.card-category {
   background-size: cover;
   background-position: center;
   height: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 30px;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.card-category-movie {
+  background-size: cover;
+  background-position: center;
+  height: 400px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -17,13 +30,63 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   margin-top: 20px;
 }
 
 .cards a {
+  text-decoration: none;
   color: white;
   font-size: 24px;
+}
+
+#card-movie-bottom > a {
+  text-decoration: none;
+  color: red;
+  font-size: 14px;
+}
+
+.card-movie-bookmark {
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  width: 500px;
+}
+
+.card-movie-bookmark > img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card-movie-bookmark h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-movie-bookmark p {
+  font-size: 12px;
+  opacity: .7;
+  margin: 0;
+}
+
+.card-movie-bookmark .card-movie-bookmark-infos {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+}
+
+#card-movie-top {
+  display: flex;
+  margin: 15px;
+}
+
+#card-movie-bottom {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px;
 }
 
 // Smallest device

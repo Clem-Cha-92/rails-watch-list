@@ -8,6 +8,7 @@
     <h1>My Lists</h1>
     <%= link_to "Create a movie list", new_list_path, class:"btn btn-flat" %>
   </div>
+
   <div class="cards">
     <% @lists.each do |list| %>
       <% if list.photo.attached? %>
