@@ -1,9 +1,13 @@
-<h1>Add a new list</h1>
+<div class="yield-body">
 
-<%= simple_form_for @list do |f| %>
-  <%= f.input :name %>
-    <%= f.input :photo, as: :file %>
-  <%= f.submit "Create list", class:"btn btn-dark" %>
-<% end %>
-<br>
-<%= link_to "Back to lists", root_path, class:"btn btn-primary" %>
+  <h1>Add a new list</h1>
+
+  <%= simple_form_for @list do |f| %>
+    <%= f.input :name %>
+      <%= f.input :photo, as: :file %>
+    <%= f.submit "Create list", class:"btn btn-dark" %>
+  <% end %>
+  <br>
+  <%= link_to "Back to lists", root_path, class:"btn btn-primary" %>
+
+</div>

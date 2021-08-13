@@ -1,10 +1,14 @@
-<h1>Create a new bookmark</h1>
+<div class="yield-body">
 
-<%= simple_form_for [@list, @bookmark] do |f| %>
-  <%= f.association :movie %>
-  <%= f.input :comment %>
-  <%= f.submit "Create bookmark", class:"btn btn-dark" %>
-<% end %>
-<br>
+  <h1>Create a new bookmark</h1>
 
-<%= link_to "Back to list", list_path(@list), class:"btn btn-primary" %>
+  <%= simple_form_for [@list, @bookmark] do |f| %>
+    <%= f.association :movie %>
+    <%= f.input :comment %>
+    <%= f.submit "Create bookmark", class:"btn btn-dark" %>
+  <% end %>
+  <br>
+
+  <%= link_to "Back to list", list_path(@list), class:"btn btn-primary" %>
+
+</div>

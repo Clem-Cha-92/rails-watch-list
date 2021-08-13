@@ -33,6 +33,13 @@
   margin-top: 20px;
 }
 
+.cards-movies {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 16px;
+  margin-top: 20px;
+}
+
 .cards a {
   text-decoration: none;
   color: white;
@@ -56,6 +63,7 @@
   height: 200px;
   width: 100%;
   object-fit: cover;
+  object-position: top;
 }
 
 .card-movie-bookmark h2 {
